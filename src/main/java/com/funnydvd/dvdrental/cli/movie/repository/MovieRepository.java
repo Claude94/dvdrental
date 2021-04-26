@@ -25,6 +25,6 @@ public interface MovieRepository {
     Movie searchMovieOne(int serialNumber);
 
     //특정 영화 삭제
-    void removeMovie(int serialNumber);
+    Movie removeMovie(int serialNumber);
 
 }

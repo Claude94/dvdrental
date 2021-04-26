@@ -2,6 +2,7 @@ package com.funnydvd.dvdrental.cli.user.controller;
 
 import com.funnydvd.dvdrental.cli.main.AppController;
 import com.funnydvd.dvdrental.cli.user.domain.User;
+import com.funnydvd.dvdrental.cli.user.repository.JdbcUserRepository;
 import com.funnydvd.dvdrental.cli.user.repository.MemoryUserRepository;
 import com.funnydvd.dvdrental.cli.user.repository.UserRepository;
 
@@ -12,8 +13,8 @@ import static com.funnydvd.dvdrental.cli.ui.AppUI.*;
 
 public class UserController implements AppController {
 
-    private final UserRepository userRepository = new MemoryUserRepository();
-
+//    private final UserRepository userRepository = new MemoryUserRepository();
+        private final UserRepository userRepository = new JdbcUserRepository();
     @Override
     public void start() {
 

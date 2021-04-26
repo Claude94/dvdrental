@@ -145,8 +145,9 @@ public class MemoryMovieRepository implements MovieRepository {
     }
 
     @Override
-    public void removeMovie(int serialNumber) {
+    public Movie removeMovie(int serialNumber) {
         movieMemoryDB.remove(serialNumber);
+        return null;
     }
 
     //영화 검색 조건을 위한 인터페이스
