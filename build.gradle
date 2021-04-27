@@ -14,6 +14,10 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 
+    //스프링 코어
+    implementation 'org.springframework:spring-core:version:5.2.9.RELEASE'
+
+
     //오라클 jdbc라이브러리 설정
     compile fileTree(dir: '/src/main/webapp/WEB-INF/lib', include: ['*.jar'])
 }

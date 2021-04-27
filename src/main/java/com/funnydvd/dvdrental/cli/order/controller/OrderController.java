@@ -20,9 +20,15 @@ import static com.funnydvd.dvdrental.cli.ui.AppUI.*;
 
 public class OrderController implements AppController {
 
-    private UserRepository userRepository = new MemoryUserRepository();
-    private MovieRepository movieRepository = new MemoryMovieRepository();
-    private OrderRepository orderRepository = new MemoryOrderRepository();
+    private UserRepository userRepository;
+    private MovieRepository movieRepository;
+    private OrderRepository orderRepository;
+
+    public OrderController(UserRepository userRepository, MovieRepository movieRepository, OrderRepository orderRepository) {
+        this.userRepository = userRepository;
+        this.movieRepository = movieRepository;
+        this.orderRepository = orderRepository;
+    }
 
     @Override
     public void start() {

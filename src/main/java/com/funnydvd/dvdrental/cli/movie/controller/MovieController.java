@@ -5,7 +5,6 @@ import com.funnydvd.dvdrental.cli.movie.domain.Movie;
 import com.funnydvd.dvdrental.cli.movie.domain.SearchCondition;
 import com.funnydvd.dvdrental.cli.movie.repository.MemoryMovieRepository;
 import com.funnydvd.dvdrental.cli.movie.repository.MovieRepository;
-import com.funnydvd.dvdrental.cli.movie.repository.jdbcMovieRepository;
 
 import java.util.List;
 
@@ -18,9 +17,8 @@ public class MovieController implements AppController {
     //영화 저장소와 의존 관계 설정
     private final MovieRepository movieRepository;
 
-    public MovieController() {
-//        movieRepository = new MemoryMovieRepository();
-        movieRepository = new jdbcMovieRepository();
+    public MovieController(MovieRepository movieRepository) {
+       this.movieRepository = movieRepository;
     }
 
     //제어 시작 기능
